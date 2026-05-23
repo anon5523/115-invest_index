@@ -15,7 +15,7 @@
     --border: rgba(255,255,255,0.07);
     --border2: rgba(255,255,255,0.12);
     --text: #f0f0f0;
-    --muted: #7a7f8e;
+    --muted: #9aa0b0;
     --accent: #7eb8f7;
     --accent2: #a78bfa;
     --green: #4ade80;
@@ -27,64 +27,49 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 15px; }
+  html { font-size: 17px; }
 
   body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 1.7;
     min-height: 100vh;
-    padding: 24px 20px 60px;
+    padding: 28px 22px 70px;
   }
 
-  .page-header {
-    text-align: center;
-    margin-bottom: 36px;
-    padding-top: 12px;
-  }
+  .page-header { text-align: center; margin-bottom: 40px; padding-top: 14px; }
   .page-header h1 {
     font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     letter-spacing: -0.5px;
     color: var(--text);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .page-header h1 span { color: var(--accent); font-style: italic; }
-  .page-header p { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.5px; }
+  .page-header p { color: var(--muted); font-size: 0.95rem; letter-spacing: 0.5px; }
 
-  .container { max-width: 920px; margin: 0 auto; }
+  .container { max-width: 940px; margin: 0 auto; }
 
-  /* ── SECTION HEADER ── */
   .section-label {
     font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 12px;
     padding-left: 2px;
   }
 
-  /* ── CARDS ── */
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .card-title {
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: var(--muted);
-    margin-bottom: 14px;
-    text-transform: uppercase;
+    padding: 22px;
+    margin-bottom: 18px;
   }
 
-  /* ── SUMMARY STRIP ── */
   .summary-strip {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -97,8 +82,8 @@
     border-radius: var(--radius-sm);
     padding: 14px;
   }
-  .stat-box .label { font-size: 0.72rem; color: var(--muted); margin-bottom: 6px; line-height: 1.3; }
-  .stat-box .value { font-family: 'DM Mono', monospace; font-size: 1.15rem; font-weight: 500; }
+  .stat-box .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 6px; line-height: 1.4; }
+  .stat-box .value { font-family: 'DM Mono', monospace; font-size: 1.2rem; font-weight: 500; }
   .v-green { color: var(--green); }
   .v-amber { color: var(--amber); }
   .v-red { color: var(--red); }
@@ -106,25 +91,24 @@
   .v-teal { color: var(--teal); }
   .v-purple { color: var(--accent2); }
 
-  /* ── CONTROLS ── */
   .controls-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 16px;
     margin-bottom: 16px;
   }
   @media (max-width: 600px) { .controls-grid { grid-template-columns: 1fr; } }
 
   .control-group label {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.82rem;
     color: var(--muted);
-    margin-bottom: 6px;
-    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
   }
   .control-group .val-display {
     font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     color: var(--accent);
     float: right;
   }
@@ -140,7 +124,7 @@
   }
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 16px; height: 16px;
+    width: 18px; height: 18px;
     border-radius: 50%;
     background: var(--accent);
     cursor: pointer;
@@ -156,27 +140,21 @@
     border-radius: var(--radius-sm);
     color: var(--text);
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 0.82rem;
-    padding: 8px 10px;
+    font-size: 0.88rem;
+    padding: 9px 12px;
     outline: none;
     cursor: pointer;
   }
   select:focus { border-color: var(--accent); }
 
-  /* ── SCENARIO TABS ── */
-  .tab-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
-  }
+  .tab-row { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
   .tab-btn {
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 20px;
     border: 1px solid var(--border2);
     background: transparent;
     color: var(--muted);
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-family: 'Noto Sans TC', sans-serif;
     cursor: pointer;
     transition: all .15s;
@@ -184,48 +162,33 @@
   .tab-btn:hover { color: var(--text); border-color: var(--accent); }
   .tab-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 500; }
 
-  /* ── CHART ── */
-  .chart-wrap {
-    position: relative;
-    width: 100%;
-    height: 260px;
-  }
+  .chart-wrap { position: relative; width: 100%; height: 280px; }
 
-  /* ── SIGNAL GRID ── */
-  .signal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   @media (max-width: 520px) { .signal-grid { grid-template-columns: 1fr; } }
 
   .signal-card {
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: 12px;
+    padding: 14px;
   }
-  .signal-card .s-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
-  }
+  .signal-card .s-header { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
   .badge {
-    font-size: 0.65rem;
-    padding: 2px 7px;
+    font-size: 0.68rem;
+    padding: 2px 8px;
     border-radius: 10px;
     font-weight: 500;
     letter-spacing: 0.3px;
     text-transform: uppercase;
+    white-space: nowrap;
   }
   .badge-bull { background: rgba(74,222,128,.15); color: var(--green); border: 1px solid rgba(74,222,128,.3); }
   .badge-bear { background: rgba(248,113,113,.15); color: var(--red); border: 1px solid rgba(248,113,113,.3); }
   .badge-neu  { background: rgba(251,191,36,.15); color: var(--amber); border: 1px solid rgba(251,191,36,.3); }
-  .signal-card .s-title { font-size: 0.8rem; font-weight: 500; }
-  .signal-card .s-body { font-size: 0.75rem; color: var(--muted); line-height: 1.55; }
+  .signal-card .s-title { font-size: 0.88rem; font-weight: 500; }
+  .signal-card .s-body { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
-  /* ── PERIOD COMPARE ── */
   .period-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -238,50 +201,122 @@
     background: var(--surface2);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: 12px;
+    padding: 14px 10px;
     text-align: center;
     cursor: pointer;
     transition: border-color .15s, transform .1s;
   }
   .period-card:hover { border-color: var(--border2); transform: translateY(-1px); }
   .period-card.active { border-color: var(--accent); }
-  .period-card .pm { font-family: 'DM Mono', monospace; font-size: 1.4rem; font-weight: 500; margin-bottom: 2px; }
-  .period-card .pl { font-size: 0.68rem; color: var(--muted); margin-bottom: 8px; }
-  .period-card .pv { font-size: 0.78rem; margin-bottom: 2px; }
+  .period-card .pm { font-family: 'DM Mono', monospace; font-size: 1.5rem; font-weight: 500; margin-bottom: 2px; }
+  .period-card .pl { font-size: 0.74rem; color: var(--muted); margin-bottom: 10px; }
+  .period-card .pv { font-size: 0.84rem; margin-bottom: 3px; }
+  .period-card .pv-label { font-size: 0.7rem; color: var(--muted); margin-bottom: 1px; }
 
-  /* ── RECOMMENDATION BOX ── */
   .rec-box {
     border-radius: var(--radius-sm);
-    padding: 14px 16px;
-    font-size: 0.82rem;
-    line-height: 1.7;
+    padding: 15px 18px;
+    font-size: 0.88rem;
+    line-height: 1.75;
     margin-top: 10px;
   }
   .rec-green { background: rgba(74,222,128,.08); border: 1px solid rgba(74,222,128,.2); color: #a7f3d0; }
   .rec-amber { background: rgba(251,191,36,.08); border: 1px solid rgba(251,191,36,.2); color: #fde68a; }
   .rec-red   { background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.2); color: #fecaca; }
   .rec-blue  { background: rgba(126,184,247,.08); border: 1px solid rgba(126,184,247,.2); color: #bfdbfe; }
-  .rec-box strong { font-weight: 500; display: block; margin-bottom: 4px; }
+  .rec-purple{ background: rgba(167,139,250,.08); border: 1px solid rgba(167,139,250,.2); color: #ddd6fe; }
+  .rec-box strong { font-weight: 500; display: block; margin-bottom: 5px; font-size: 0.92rem; }
 
-  /* ── DIVIDER ── */
+  .alert-row { display: flex; flex-direction: column; gap: 10px; }
+
+  .reminder-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .reminder-card .r-icon { font-size: 1.1rem; margin-right: 6px; }
+  .reminder-card .r-title { font-size: 0.92rem; font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; }
+  .reminder-card .r-body { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+  .reminder-card .r-body strong { color: var(--text); font-weight: 500; }
+
+  .border-l-green { border-left: 3px solid var(--green); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  .border-l-amber { border-left: 3px solid var(--amber); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  .border-l-red   { border-left: 3px solid var(--red);   border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  .border-l-blue  { border-left: 3px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  .border-l-purple{ border-left: 3px solid var(--accent2);border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+
   hr { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
 
-  /* ── FOOTER ── */
-  .footer { text-align: center; color: var(--muted); font-size: 0.7rem; margin-top: 40px; line-height: 1.8; }
+  .progress-track { height: 6px; background: var(--border2); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 3px; transition: width .4s; }
 
-  /* ── PROGRESS BAR ── */
-  .progress-wrap { margin: 6px 0 2px; }
-  .progress-track { height: 5px; background: var(--border2); border-radius: 3px; overflow: hidden; }
-  .progress-fill { height: 100%; border-radius: 3px; transition: width .3s; }
-
-  /* ── LEGEND ── */
-  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.72rem; color: var(--muted); margin-bottom: 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
   .legend span { display: flex; align-items: center; gap: 5px; }
-  .ldot { width: 10px; height: 3px; border-radius: 2px; }
+  .ldot { width: 12px; height: 3px; border-radius: 2px; }
+
+  .footer { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 40px; line-height: 1.9; }
+
+  .reminders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 560px) { .reminders-grid { grid-template-columns: 1fr; } }
+
+  /* ── 09 策略比較新增樣式 ── */
+  .cmp-scene-tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .cmp-tab {
+    padding: 6px 14px; border-radius: 20px;
+    border: 1px solid var(--border2); background: transparent;
+    color: var(--muted); font-size: 0.82rem;
+    font-family: 'Noto Sans TC', sans-serif; cursor: pointer; transition: all .15s;
+  }
+  .cmp-tab:hover { color: var(--text); border-color: var(--accent); }
+  .cmp-tab.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 500; }
+
+  .opt-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 14px; }
+  @media (max-width: 560px) { .opt-grid { grid-template-columns: repeat(2,1fr); } }
+
+  .opt-card {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 14px 12px; position: relative;
+  }
+  .opt-card.opt-match { border: 2px solid var(--accent); }
+  .opt-card .oc-scene { font-size: 0.72rem; font-weight: 500; text-transform: uppercase;
+    letter-spacing: .5px; margin-bottom: 8px; }
+  .opt-card .oc-strat { font-size: 1rem; font-weight: 500; margin-bottom: 3px; }
+  .opt-card .oc-sub { font-size: 0.75rem; color: var(--muted); margin-bottom: 10px; }
+  .opt-card .oc-row { display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 4px; }
+  .opt-card .oc-row .ok { color: var(--muted); }
+  .opt-card .oc-row .ov { font-weight: 500; }
+  .opt-card .oc-why { font-size: 0.74rem; color: var(--muted); line-height: 1.55;
+    border-top: .5px solid var(--border2); padding-top: 8px; margin-top: 8px; }
+  .opt-match-badge {
+    position: absolute; top: -1px; right: 10px;
+    font-size: 0.65rem; padding: 2px 8px;
+    background: rgba(126,184,247,.2); color: var(--accent);
+    border-radius: 0 0 6px 6px; font-weight: 500; letter-spacing: .3px;
+  }
+
+  .cmp-summary-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .cmp-summary-table th {
+    text-align: left; font-weight: 500; padding: 9px 10px;
+    border-bottom: 1px solid var(--border2); color: var(--muted); font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .cmp-summary-table td { padding: 9px 10px; border-bottom: .5px solid var(--border); }
+  .cmp-summary-table tr:last-child td { border-bottom: none; }
+  .cmp-summary-table .match-row td { background: rgba(126,184,247,.05); }
+  .cmp-chart-wrap { position: relative; width: 100%; height: 260px; }
+  .cmp-verdict {
+    border-radius: var(--radius-sm); padding: 13px 16px;
+    font-size: 0.84rem; line-height: 1.75; margin-top: 10px;
+  }
+  .cmp-verdict strong { font-weight: 500; display: block; margin-bottom: 4px; font-size: 0.88rem; }
+  .cv-blue  { background: rgba(126,184,247,.08); border: 1px solid rgba(126,184,247,.2); color: #bfdbfe; }
+  .cv-green { background: rgba(74,222,128,.08);  border: 1px solid rgba(74,222,128,.2);  color: #a7f3d0; }
+  .cv-amber { background: rgba(251,191,36,.08);  border: 1px solid rgba(251,191,36,.2);  color: #fde68a; }
+  .cv-red   { background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.2); color: #fecaca; }
 </style>
 </head>
 <body>
-
 <div class="container">
 
   <div class="page-header">
@@ -289,17 +324,21 @@
     <p>安聯大壩 × 0050｜資產成長規劃</p>
   </div>
 
-  <!-- ── SECTION 1: 持倉現況 ── -->
+  <!-- 01 現況 -->
   <div class="section-label">01 — 現況總覽</div>
   <div class="card">
-    <div class="summary-strip" id="summaryStrip">
+    <div class="summary-strip">
       <div class="stat-box">
-        <div class="label">安聯大壩<br>再投入資金</div>
+        <div class="label">安聯大壩 再投入金額</div>
         <div class="value v-accent" id="s-dawa-in">100 萬</div>
       </div>
       <div class="stat-box">
-        <div class="label">安聯大壩<br>原始成本基礎</div>
+        <div class="label">原始成本基礎（6年前）</div>
         <div class="value v-purple">約 45 萬</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">大壩 6 年真實報酬</div>
+        <div class="value v-green">200%+</div>
       </div>
       <div class="stat-box">
         <div class="label">0050 現有持倉</div>
@@ -310,35 +349,29 @@
         <div class="value v-teal">1 萬 / 月</div>
       </div>
       <div class="stat-box">
-        <div class="label">總資金部位</div>
+        <div class="label">現有總部位</div>
         <div class="value v-green" id="s-total">280 萬</div>
       </div>
-      <div class="stat-box">
-        <div class="label">大壩6年真實報酬</div>
-        <div class="value v-green">200%+</div>
-      </div>
     </div>
-
-    <div class="rec-box rec-blue">
-      <strong>重要認知：這 100 萬的「真實成本」遠低於帳面數字</strong>
-      安聯大壩原始 142 萬市值，贖回後扣費實得 136.3 萬，其中 36 萬另有規劃，再投入金額確認為 100 萬。
-      原始投入成本約 45~50 萬，代表這 100 萬有大半是已實現的獲利在繼續工作。
-      真正的「本金風險」遠低於 100 萬這個數字。
+    <div class="rec-box rec-blue" style="margin-top:0">
+      <strong>你的成本優勢：真實底線遠低於帳面</strong>
+      142 萬市值贖回扣 4% 費用，實得 136.3 萬，其中 36 萬另有規劃，確認再投入 100 萬。
+      原始成本約 45 萬，這 100 萬裡有大半是已實現的獲利繼續工作，真正的本金風險遠低於 100 萬。
     </div>
   </div>
 
-  <!-- ── SECTION 2: 投資參數設定 ── -->
+  <!-- 02 參數 -->
   <div class="section-label">02 — 策略參數設定</div>
   <div class="card">
     <div class="controls-grid">
       <div class="control-group">
-        <label>安聯大壩再投入金額
+        <label>安聯大壩投入金額（萬）
           <span class="val-display" id="d-dawa-amt">100 萬</span>
         </label>
-        <input type="range" id="sl-dawa-amt" min="100" max="200" step="1" value="136">
+        <input type="range" id="sl-dawa-amt" min="50" max="150" step="1" value="100">
       </div>
       <div class="control-group">
-        <label>A 一次投入比例（大壩）
+        <label>A 一次投入比例
           <span class="val-display" id="d-ratioA">30%</span>
         </label>
         <input type="range" id="sl-ratioA" min="10" max="60" step="5" value="30">
@@ -350,217 +383,249 @@
         <input type="range" id="sl-months" min="6" max="24" step="6" value="12">
       </div>
       <div class="control-group">
-        <label>目標資產（萬元）
+        <label>目標資產上限（萬）
           <span class="val-display" id="d-target">500 萬</span>
         </label>
-        <input type="range" id="sl-target" min="200" max="1000" step="50" value="500">
+        <input type="range" id="sl-target" min="200" max="500" step="25" value="500">
       </div>
     </div>
-
-    <div class="controls-grid">
-      <div class="control-group">
-        <label>市場情境</label>
+    <div class="controls-grid" style="margin-bottom:0">
+      <div class="control-group" style="grid-column:1/-1">
+        <label>市場情境（大壩 & 0050 同步）</label>
         <select id="sel-scene">
-          <option value="bull">牛市繼續（AI紅利持續 +50%/yr）</option>
-          <option value="crash_recover">先崩後漲（-30% 再反彈）</option>
-          <option value="sideways">橫盤震盪（高檔整理 +5%）</option>
-          <option value="bear">熊市修正（-25% 不回）</option>
-        </select>
-      </div>
-      <div class="control-group">
-        <label>0050 市場情境</label>
-        <select id="sel-scene0050">
-          <option value="bull">樂觀（+25%/yr）</option>
-          <option value="normal">普通（+10%/yr）</option>
-          <option value="bear">保守（-10%/yr）</option>
+          <option value="bull">牛市繼續 — AI 紅利持續，大壩 +50%、0050 +25% 年化</option>
+          <option value="crash_recover">先崩後漲 — 近期回跌 30%，12個月後反彈修復</option>
+          <option value="sideways">橫盤震盪 — 高檔整理，大壩 +5%、0050 +8% 年化</option>
+          <option value="bear">熊市修正 — 持續下行，大壩 -25%、0050 -10% 年化</option>
         </select>
       </div>
     </div>
-
-    <!-- 衍生數字 -->
     <div class="summary-strip" style="margin-top:14px;margin-bottom:0">
       <div class="stat-box">
-        <div class="label">A 一次投入金額</div>
-        <div class="value v-accent" id="d-A-amt">40.9 萬</div>
+        <div class="label">A 一次投入</div>
+        <div class="value v-accent" id="d-A-amt">30 萬</div>
       </div>
       <div class="stat-box">
-        <div class="label">B 總金額</div>
-        <div class="value v-amber" id="d-B-amt">95.4 萬</div>
+        <div class="label">B 總額</div>
+        <div class="value v-amber" id="d-B-amt">70 萬</div>
       </div>
       <div class="stat-box">
         <div class="label">B 每月投入</div>
-        <div class="value v-amber" id="d-monthly">8.0 萬</div>
+        <div class="value v-amber" id="d-monthly">5.8 萬</div>
       </div>
       <div class="stat-box">
-        <div class="label">0050 預估 1 年後</div>
-        <div class="value v-teal" id="d-0050-1yr">207 萬</div>
+        <div class="label">0050 預估1年後</div>
+        <div class="value v-teal" id="d-0050-1yr">— 萬</div>
       </div>
     </div>
   </div>
 
-  <!-- ── SECTION 3: 情境模擬圖 ── -->
-  <div class="section-label">03 — 資產情境模擬</div>
+  <!-- 03 情境圖 -->
+  <div class="section-label">03 — 資產情境模擬（36個月）</div>
   <div class="card">
-    <div class="tab-row" id="sceneTabs">
+    <div class="tab-row">
       <button class="tab-btn active" onclick="switchTab('combined')">合計資產</button>
       <button class="tab-btn" onclick="switchTab('dawa')">大壩基金</button>
       <button class="tab-btn" onclick="switchTab('t0050')">0050</button>
     </div>
-    <div class="legend" id="chartLegend">
-      <span><span class="ldot" style="background:#7eb8f7"></span>你的策略</span>
-      <span><span class="ldot" style="background:#f87171;border-top:2px dashed #f87171;height:0;display:inline-block;width:18px;border-radius:0"></span>全押對照</span>
-      <span><span class="ldot" style="background:#4ade80;border:1px dashed #4ade80"></span>全定額對照</span>
-      <span><span class="ldot" style="background:#fbbf24;border-top:2px dashed #fbbf24;height:0;display:inline-block;width:18px;border-radius:0"></span>目標線</span>
+    <div class="legend">
+      <span><span class="ldot" style="background:#7eb8f7"></span>你的策略（A+B）</span>
+      <span><span class="ldot" style="background:#f87171"></span>全押對照</span>
+      <span><span class="ldot" style="background:#4ade80"></span>全定額對照</span>
+      <span><span class="ldot" style="background:#fbbf24"></span>目標線</span>
     </div>
     <div class="chart-wrap">
-      <canvas id="mainChart" role="img" aria-label="資產情境模擬折線圖，含你的策略、全押對照、全定額對照與目標線"></canvas>
+      <canvas id="mainChart" role="img" aria-label="36個月資產情境模擬折線圖"></canvas>
     </div>
-
-    <!-- 關鍵指標 -->
     <div class="summary-strip" style="margin-top:14px;margin-bottom:0">
       <div class="stat-box">
-        <div class="label">大壩 1 年後預估</div>
-        <div class="value" id="r-dawa-1yr" style="color:var(--accent)">—</div>
+        <div class="label">大壩 1年後市值</div>
+        <div class="value v-accent" id="r-dawa-1yr">—</div>
       </div>
       <div class="stat-box">
-        <div class="label">大壩 2 年後預估</div>
-        <div class="value" id="r-dawa-2yr" style="color:var(--accent)">—</div>
+        <div class="label">大壩 2年後市值</div>
+        <div class="value v-accent" id="r-dawa-2yr">—</div>
       </div>
       <div class="stat-box">
-        <div class="label">合計 1 年後</div>
-        <div class="value" id="r-total-1yr" style="color:var(--green)">—</div>
+        <div class="label">合計 1年後總資產</div>
+        <div class="value v-green" id="r-total-1yr">—</div>
       </div>
       <div class="stat-box">
-        <div class="label">合計 2 年後</div>
-        <div class="value" id="r-total-2yr" style="color:var(--green)">—</div>
+        <div class="label">合計 2年後總資產</div>
+        <div class="value v-green" id="r-total-2yr">—</div>
       </div>
       <div class="stat-box">
-        <div class="label">目標達成預估</div>
-        <div class="value" id="r-goal-yr" style="color:var(--amber)">—</div>
+        <div class="label">預估達標時間</div>
+        <div class="value v-amber" id="r-goal-yr">—</div>
       </div>
       <div class="stat-box">
-        <div class="label">大壩最大回撤</div>
-        <div class="value" id="r-maxloss" style="color:var(--red)">—</div>
+        <div class="label">大壩最大帳面虧損</div>
+        <div class="value v-red" id="r-maxloss">—</div>
       </div>
     </div>
   </div>
 
-  <!-- ── SECTION 4: B 期數比較 ── -->
+  <!-- 04 期數比較 -->
   <div class="section-label">04 — B 期數比較（當前情境）</div>
   <div class="card">
     <div class="period-grid" id="periodGrid"></div>
     <div id="periodVerdict"></div>
   </div>
 
-  <!-- ── SECTION 5: 市場訊號 ── -->
+  <!-- 05 市場訊號 -->
   <div class="section-label">05 — 市場多空訊號</div>
   <div class="card">
     <div class="signal-grid">
       <div class="signal-card">
-        <div class="s-header"><span class="badge badge-bull">多方</span><span class="s-title">台積電財報創新高</span></div>
-        <div class="s-body">Q1 EPS 22 元、毛利率 66.2% 雙創歷史新高。2026 年資本支出 520~560 億美元確認不降，AI 需求由獲利數字實證。</div>
+        <div class="s-header"><span class="badge badge-bull">多方</span><span class="s-title">台積電財報雙創新高</span></div>
+        <div class="s-body">Q1 EPS 22 元、毛利率 66.2%，2026 年資本支出 520~560 億美元不降。AI 需求有財報數字實證，不是純概念炒作。</div>
       </div>
       <div class="signal-card">
         <div class="s-header"><span class="badge badge-bull">多方</span><span class="s-title">AI 建設週期長達 3~5 年</span></div>
-        <div class="s-body">CoWoS 先進封裝、HBM 記憶體、散熱全供應鏈受惠，不是單一股票題材。台積電到 2028 年累計資本支出上看 2000 億美元。</div>
+        <div class="s-body">台積電到 2028 年累計資本支出上看 2000 億美元，CoWoS、HBM、散熱、PCB 全供應鏈受惠，基本面廣度夠。</div>
       </div>
       <div class="signal-card">
-        <div class="s-header"><span class="badge badge-bear">空方</span><span class="s-title">融資餘額 17 年高峰</span></div>
-        <div class="s-body">台股融資餘額突破 3,466 億元，為 17.5 年最高。大量散戶借貸入場，一旦回跌將觸發斷頭賣壓，放大下跌幅度。</div>
+        <div class="s-header"><span class="badge badge-bear">空方</span><span class="s-title">融資餘額 17 年最高</span></div>
+        <div class="s-body">台股融資餘額突破 3,466 億元，散戶大量借貸入場。一旦回跌，斷頭賣壓將放大跌幅，是最大的籌碼風險。</div>
       </div>
       <div class="signal-card">
-        <div class="s-header"><span class="badge badge-bear">空方</span><span class="s-title">利多出盡訊號出現</span></div>
-        <div class="s-body">台積電超強財報當日反跌，5/15 台股衝 42,408 點歷史新高後當日收跌 579 點。「買預期賣事實」的短線訊號明確。</div>
+        <div class="s-header"><span class="badge badge-bear">空方</span><span class="s-title">利多出盡訊號已現</span></div>
+        <div class="s-body">台積電史上最強財報公布後股價反跌，5/15 台股衝歷史新高 42,408 點後當日重跌 579 點，「買預期賣事實」明確。</div>
       </div>
       <div class="signal-card">
-        <div class="s-header"><span class="badge badge-neu">中性</span><span class="s-title">估值已切換到高位</span></div>
-        <div class="s-body">台積電 PE 從歷史均值 18 倍升至 27 倍，聯發科 30+ 倍。按「完美執行」定價，容錯空間低，但基本面確實支撐。</div>
+        <div class="s-header"><span class="badge badge-neu">中性</span><span class="s-title">估值已按完美劇本定價</span></div>
+        <div class="s-body">台積電 PE 27 倍、聯發科 30+ 倍，容錯空間低。但若 AI 需求持續超預期，高估值仍可能維持甚至擴張。</div>
       </div>
       <div class="signal-card">
-        <div class="s-header"><span class="badge badge-neu">中性</span><span class="s-title">融資維持率尚健康</span></div>
-        <div class="s-body">2026 年 3 月大盤融資維持率 164~168%，高於 130% 斷頭警戒線，目前系統性爆發風險偏低，但空間已縮窄。</div>
+        <div class="s-header"><span class="badge badge-neu">中性</span><span class="s-title">融資維持率尚在安全區</span></div>
+        <div class="s-body">3 月大盤維持率 164~168%，高於 130% 警戒線，整體系統性爆發風險尚低，但一旦下跌 15% 即進入危險地帶。</div>
       </div>
     </div>
-
     <div class="rec-box rec-amber" style="margin-top:14px">
-      <strong>綜合判斷：真牛市、估值高、籌碼過熱並存</strong>
-      AI 需求是真實的，但市場在短期已充分定價甚至透支。最穩健的做法是：讓 A 享受現在漲勢，讓 B 保留子彈應對波動。
-      你的 6 年持有紀律（歷經 2020、2022 大跌沒出場）是最大的優勢，繼續發揮它。
+      <strong>綜合市場判斷</strong>
+      真牛市 + 估值偏高 + 籌碼過熱三者並存。A 讓你現在就入場享受漲勢，B 保留子彈應對波動。你的 6 年持有紀律（歷經 2020、2022 大跌不出場）是最大優勢，繼續發揮它。
     </div>
   </div>
 
-  <!-- ── SECTION 6: 目標進度 ── -->
+  <!-- 06 目標進度 -->
   <div class="section-label">06 — 目標達成進度</div>
-  <div class="card" id="goalCard">
-    <div class="summary-strip" style="margin-bottom:14px">
+  <div class="card">
+    <div class="summary-strip" style="margin-bottom:16px">
       <div class="stat-box">
-        <div class="label">目標資產</div>
+        <div class="label">目標資產上限</div>
         <div class="value v-amber" id="g-target">500 萬</div>
       </div>
       <div class="stat-box">
         <div class="label">現有總資產</div>
-        <div class="value v-green" id="g-current">316 萬</div>
+        <div class="value v-green" id="g-current">280 萬</div>
       </div>
       <div class="stat-box">
-        <div class="label">缺口</div>
-        <div class="value v-red" id="g-gap">184 萬</div>
+        <div class="label">距目標缺口</div>
+        <div class="value v-red" id="g-gap">220 萬</div>
       </div>
       <div class="stat-box">
         <div class="label">目前達成率</div>
-        <div class="value v-accent" id="g-pct">63%</div>
+        <div class="value v-accent" id="g-pct">56%</div>
       </div>
     </div>
-
-    <div class="label" style="font-size:0.75rem;color:var(--muted);margin-bottom:6px">目標達成進度（1 年 / 2 年 / 3 年）</div>
+    <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px">預估達標進度（此情境下）</div>
     <div id="progressBars"></div>
-    <div id="goalVerdict" style="margin-top:12px"></div>
+    <div id="goalVerdict"></div>
   </div>
 
-  <!-- ── SECTION 7: 最終建議 ── -->
-  <div class="section-label">07 — 專屬建議配置</div>
-  <div class="card" id="finalRec">
+  <!-- 07 專屬投資提醒 -->
+  <div class="section-label">07 — 專屬投資提醒</div>
+  <div class="card">
+    <div id="remindersContent"></div>
+  </div>
+
+  <!-- 08 最終建議 -->
+  <div class="section-label">08 — 當前配置建議</div>
+  <div class="card">
     <div id="finalRecContent"></div>
+  </div>
+
+  <!-- 09 策略情境比較 -->
+  <div class="section-label">09 — 固定策略 A30% B70% 12月 四情境效益比較</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px">
+      <div class="stat-box"><div class="label">固定策略本金</div><div class="value v-accent">100 萬</div></div>
+      <div class="stat-box"><div class="label">A 一次投入</div><div class="value" style="color:#7eb8f7">30 萬（30%）</div></div>
+      <div class="stat-box"><div class="label">B 定期定額</div><div class="value v-amber">70 萬（70%）</div></div>
+      <div class="stat-box"><div class="label">B 期數 / 每月</div><div class="value">12 月 / 5.8萬</div></div>
+    </div>
+    <div style="font-size:0.82rem;color:var(--muted);margin-bottom:12px">切換情境查看資產曲線與分析</div>
+    <div class="cmp-scene-tabs" id="cmpTabs">
+      <button class="cmp-tab active" onclick="cmpSwitch('bull',this)">牛市繼續</button>
+      <button class="cmp-tab" onclick="cmpSwitch('crash',this)">先崩後漲</button>
+      <button class="cmp-tab" onclick="cmpSwitch('sideways',this)">橫盤震盪</button>
+      <button class="cmp-tab" onclick="cmpSwitch('bear',this)">熊市修正</button>
+    </div>
+    <div class="legend">
+      <span><span class="ldot" style="background:#7eb8f7"></span>固定策略 A30% B12月</span>
+      <span><span class="ldot" style="background:#4ade80"></span>此情境最佳策略</span>
+      <span><span class="ldot" style="background:#f87171"></span>全押對照</span>
+      <span><span class="ldot" style="background:#888780"></span>全定額24月</span>
+    </div>
+    <div class="cmp-chart-wrap"><canvas id="cmpChart" role="img" aria-label="固定策略與各情境最佳策略比較折線圖">策略比較折線圖</canvas></div>
+    <div id="cmpVerdict"></div>
+  </div>
+
+  <div class="section-label">09b — 各情境最佳配置 vs 固定策略總表</div>
+  <div class="card">
+    <div class="opt-grid" id="cmpOptCards"></div>
+    <div style="overflow-x:auto">
+      <table class="cmp-summary-table">
+        <thead>
+          <tr>
+            <th>情境</th><th>固定策略<br>3年後市值</th><th>固定策略<br>報酬率</th>
+            <th>最佳策略</th><th>最佳3年後市值</th>
+            <th>差距（萬）</th><th>固定最大<br>帳面回撤</th><th>結論</th>
+          </tr>
+        </thead>
+        <tbody id="cmpTableBody"></tbody>
+      </table>
+    </div>
+    <div class="rec-box rec-blue" style="margin-top:14px">
+      <strong>核心洞察：固定策略的真正價值是「在不知情境的前提下，四種情境都不犯大錯」</strong>
+      牛市不是最賺，熊市不是保本最強，但沒有任何情境會讓你後悔到崩潰。
+      橫盤時它就是最佳解。對 6 年都沒有停損出場的長期投資人而言，這個配置與你的性格完全匹配。
+    </div>
   </div>
 
   <div class="footer">
     本儀表板為輔助分析工具，不構成任何投資建議。<br>
-    投資有風險，過去績效不代表未來報酬。建議諮詢合格理財顧問後再做決策。
+    投資有風險，過去績效不代表未來報酬。建議諮詢合格理財顧問後再做決策。<br>
+    資料更新：2026 年 5 月
   </div>
 
 </div>
 
 <script>
-// ─── STATE ───────────────────────────────
 let state = {
   dawaAmt: 100,
   ratioA: 0.30,
   months: 12,
   target: 500,
   scene: 'bull',
-  scene0050: 'bull',
   chartTab: 'combined'
 };
 let mainChart = null;
 
-// ─── HELPERS ─────────────────────────────
-function fmt(n, d=1){ return (+n).toFixed(d); }
+function fmt(n,d=1){ return (+n).toFixed(d); }
 function fmtM(n){ return fmt(n,1)+' 萬'; }
 
-// ─── PRICE GENERATORS ────────────────────
+// ── 價格模擬 ────────────────────────────
 function genDawaPrices(scene, n){
   const p=[1];
   for(let i=1;i<=n;i++){
     const t=i/n;
-    if(scene==='bull'){
-      p.push(1+0.50*t+0.04*Math.sin(i*1.1));
-    } else if(scene==='crash_recover'){
+    if(scene==='bull') p.push(1+0.50*t+0.04*Math.sin(i*1.1));
+    else if(scene==='crash_recover'){
       if(t<0.38) p.push(1-0.30*(t/0.38));
       else p.push(0.70+0.58*((t-0.38)/0.62));
-    } else if(scene==='sideways'){
-      p.push(1+0.05*Math.sin(i*0.65)+0.003*i);
-    } else {
-      p.push(Math.max(0.60,1-0.35*t-0.03*Math.sin(i*1.0)));
-    }
+    } else if(scene==='sideways') p.push(1+0.05*Math.sin(i*0.65)+0.004*i);
+    else p.push(Math.max(0.60,1-0.35*t-0.03*Math.sin(i*1.0)));
   }
   return p;
 }
@@ -569,22 +634,23 @@ function gen0050Prices(scene, n){
   for(let i=1;i<=n;i++){
     const t=i/n;
     if(scene==='bull') p.push(1+0.25*t+0.02*Math.sin(i*0.8));
-    else if(scene==='normal') p.push(1+0.10*t+0.015*Math.sin(i*0.9));
-    else p.push(Math.max(0.80,1-0.10*t));
+    else if(scene==='crash_recover'){
+      if(t<0.38) p.push(1-0.15*(t/0.38));
+      else p.push(0.85+0.30*((t-0.38)/0.62));
+    } else if(scene==='sideways') p.push(1+0.08*t+0.015*Math.sin(i*0.9));
+    else p.push(Math.max(0.85,1-0.10*t));
   }
   return p;
 }
 
-// ─── SIMULATE DAWA (A+B) ─────────────────
+// ── 模擬函式 ────────────────────────────
 function simDawa(prices, total, ratioA, months){
-  const A=total*ratioA, B=total*(1-ratioA);
-  const monthly=B/months;
+  const A=total*ratioA, B=total*(1-ratioA), monthly=B/months;
   let uA=A/prices[0], uB=0, spent=A;
   const vals=[total];
   for(let i=1;i<prices.length;i++){
     if(i<=months){ uB+=monthly/prices[i]; spent+=monthly; }
-    const idle=Math.max(0,total-spent);
-    vals.push(+(((uA+uB)*prices[i]+idle).toFixed(2)));
+    vals.push(+(((uA+uB)*prices[i]+Math.max(0,total-spent)).toFixed(2)));
   }
   return vals;
 }
@@ -598,255 +664,353 @@ function simDCA(prices, total, months){
   const vals=[total];
   for(let i=1;i<prices.length;i++){
     if(i<=months){ units+=monthly/prices[i]; spent+=monthly; }
-    const idle=Math.max(0,total-spent);
-    vals.push(+((units*prices[i]+idle).toFixed(2)));
+    vals.push(+((units*prices[i]+Math.max(0,total-spent)).toFixed(2)));
   }
   return vals;
 }
 function sim0050(prices, base, monthly){
-  let units=base/prices[0], cumMonthly=0;
+  let units=base/prices[0];
   const vals=[base];
   for(let i=1;i<prices.length;i++){
     units+=monthly/prices[i];
-    cumMonthly+=monthly;
     vals.push(+((units*prices[i]).toFixed(2)));
   }
   return vals;
 }
 
-// ─── MAIN UPDATE ─────────────────────────
+// ── 主更新 ──────────────────────────────
 function update(){
-  const { dawaAmt, ratioA, months, target, scene, scene0050 } = state;
-  const N = 36;
-  const labels = Array.from({length:N+1},(_,i)=>i===0?'現在':(i%6===0?`第${i}月`:''));
+  const {dawaAmt,ratioA,months,target,scene}=state;
+  const N=36;
+  const labels=Array.from({length:N+1},(_,i)=>i===0?'現在':(i%6===0?`第${i}月`:''));
 
-  const dawaPrices = genDawaPrices(scene, N);
-  const t0050Prices = gen0050Prices(scene0050, N);
+  const dp=genDawaPrices(scene,N);
+  const op=gen0050Prices(scene,N);
 
-  const dawaVals   = simDawa(dawaPrices, dawaAmt, ratioA, months);
-  const dawaAllIn  = simAllIn(dawaPrices, dawaAmt);
-  const dawaDCA    = simDCA(dawaPrices, dawaAmt, months);
-  const vals0050   = sim0050(t0050Prices, 180, 1);
+  const dawaVals  = simDawa(dp,dawaAmt,ratioA,months);
+  const dawaAllIn = simAllIn(dp,dawaAmt);
+  const dawaDCA   = simDCA(dp,dawaAmt,months);
+  const vals0050  = sim0050(op,180,1);
 
-  const combined     = dawaVals.map((v,i)=>+(v+vals0050[i]).toFixed(1));
-  const combinedAI   = dawaAllIn.map((v,i)=>+(v+vals0050[i]).toFixed(1));
-  const combinedDCA  = dawaDCA.map((v,i)=>+(v+vals0050[i]).toFixed(1));
+  const combined    = dawaVals.map((v,i)=>+(v+vals0050[i]).toFixed(1));
+  const combinedAI  = dawaAllIn.map((v,i)=>+(v+vals0050[i]).toFixed(1));
+  const combinedDCA = dawaDCA.map((v,i)=>+(v+vals0050[i]).toFixed(1));
 
-  // results
-  const dawa1yr  = dawaVals[12];
-  const dawa2yr  = dawaVals[24] || dawaVals[dawaVals.length-1];
-  const total1yr = combined[12];
-  const total2yr = combined[24];
-  const maxLoss  = Math.min(...dawaVals)-dawaAmt;
+  const dawa1yr=dawaVals[12], dawa2yr=dawaVals[24];
+  const total1yr=combined[12], total2yr=combined[24];
+  const maxLoss=Math.min(...dawaVals)-dawaAmt;
 
-  document.getElementById('r-dawa-1yr').textContent = fmtM(dawa1yr);
-  document.getElementById('r-dawa-2yr').textContent = fmtM(dawa2yr);
-  document.getElementById('r-total-1yr').textContent = fmtM(total1yr);
-  document.getElementById('r-total-2yr').textContent = fmtM(total2yr);
-  document.getElementById('r-maxloss').textContent = (maxLoss>=0?'+':'')+fmt(maxLoss,1)+' 萬';
+  // stat boxes
+  document.getElementById('r-dawa-1yr').textContent=fmtM(dawa1yr);
+  document.getElementById('r-dawa-2yr').textContent=fmtM(dawa2yr);
+  document.getElementById('r-total-1yr').textContent=fmtM(total1yr);
+  document.getElementById('r-total-2yr').textContent=fmtM(total2yr);
+  document.getElementById('r-maxloss').textContent=(maxLoss>=0?'+':'')+fmt(maxLoss,1)+' 萬';
+  document.getElementById('d-0050-1yr').textContent=fmtM(vals0050[12]);
+  document.getElementById('s-dawa-in').textContent=fmtM(dawaAmt);
+  document.getElementById('s-total').textContent=fmtM(dawaAmt+180);
 
-  // goal year estimate
-  let goalYr = '3年以上';
+  let goalYr='目前情境3年內難達標';
   for(let i=1;i<=N;i++){
-    if(combined[i]>=target){ goalYr=`約 ${i} 個月後`; break; }
+    if(combined[i]>=target){ goalYr=`約第 ${i} 個月（${Math.ceil(i/12)} 年內）`; break; }
   }
-  document.getElementById('r-goal-yr').textContent = goalYr;
+  document.getElementById('r-goal-yr').textContent=goalYr;
 
-  // derived params
-  const A = dawaAmt*ratioA;
-  const B = dawaAmt*(1-ratioA);
-  document.getElementById('d-A-amt').textContent = fmtM(A);
-  document.getElementById('d-B-amt').textContent = fmtM(B);
-  document.getElementById('d-monthly').textContent = fmtM(B/months);
-  document.getElementById('d-0050-1yr').textContent = fmtM(vals0050[12]);
-  document.getElementById('s-dawa-in').textContent = fmtM(dawaAmt);
-  document.getElementById('s-total').textContent = fmtM(dawaAmt+180);
+  const A=dawaAmt*ratioA, B=dawaAmt*(1-ratioA);
+  document.getElementById('d-A-amt').textContent=fmtM(A);
+  document.getElementById('d-B-amt').textContent=fmtM(B);
+  document.getElementById('d-monthly').textContent=fmtM(B/months);
 
-  // chart data selection
-  let yVals, yAllIn, yDCA;
-  if(state.chartTab==='dawa'){
-    yVals=dawaVals; yAllIn=dawaAllIn; yDCA=dawaDCA;
-  } else if(state.chartTab==='t0050'){
-    yVals=vals0050; yAllIn=vals0050; yDCA=vals0050;
-  } else {
-    yVals=combined; yAllIn=combinedAI; yDCA=combinedDCA;
-  }
-  const targetLine = Array(N+1).fill(target);
+  // chart
+  let yVals,yAllIn,yDCA;
+  if(state.chartTab==='dawa'){ yVals=dawaVals; yAllIn=dawaAllIn; yDCA=dawaDCA; }
+  else if(state.chartTab==='t0050'){ yVals=vals0050; yAllIn=vals0050; yDCA=vals0050; }
+  else { yVals=combined; yAllIn=combinedAI; yDCA=combinedDCA; }
 
-  const datasets = [
-    {
-      label:'你的策略', data:yVals,
-      borderColor:'#7eb8f7', backgroundColor:'rgba(126,184,247,0.06)',
-      borderWidth:2.5, tension:0.4, pointRadius:0, fill:true
-    },
-    {
-      label:'全押對照', data:yAllIn,
-      borderColor:'#f87171', backgroundColor:'transparent',
-      borderWidth:1.5, borderDash:[6,4], tension:0.4, pointRadius:0
-    },
-    {
-      label:'全定額對照', data:yDCA,
-      borderColor:'#4ade80', backgroundColor:'transparent',
-      borderWidth:1.5, borderDash:[3,3], tension:0.4, pointRadius:0
-    },
-    {
-      label:'目標線', data:targetLine,
-      borderColor:'#fbbf24', backgroundColor:'transparent',
-      borderWidth:1.5, borderDash:[8,5], tension:0, pointRadius:0
-    }
+  const datasets=[
+    {label:'你的策略',data:yVals,borderColor:'#7eb8f7',backgroundColor:'rgba(126,184,247,0.07)',borderWidth:2.5,tension:0.4,pointRadius:0,fill:true},
+    {label:'全押對照',data:yAllIn,borderColor:'#f87171',backgroundColor:'transparent',borderWidth:1.5,borderDash:[6,4],tension:0.4,pointRadius:0},
+    {label:'全定額',data:yDCA,borderColor:'#4ade80',backgroundColor:'transparent',borderWidth:1.5,borderDash:[3,3],tension:0.4,pointRadius:0},
+    {label:'目標線',data:Array(N+1).fill(target),borderColor:'#fbbf24',backgroundColor:'transparent',borderWidth:1.5,borderDash:[8,5],tension:0,pointRadius:0}
   ];
 
-  if(mainChart){
-    mainChart.data.labels=labels;
-    mainChart.data.datasets=datasets;
-    mainChart.update('none');
-  } else {
-    mainChart = new Chart(document.getElementById('mainChart'),{
-      type:'line',
-      data:{labels,datasets},
+  if(mainChart){ mainChart.data.labels=labels; mainChart.data.datasets=datasets; mainChart.update('none'); }
+  else {
+    mainChart=new Chart(document.getElementById('mainChart'),{
+      type:'line', data:{labels,datasets},
       options:{
-        responsive:true, maintainAspectRatio:false,
-        plugins:{
-          legend:{display:false},
-          tooltip:{
-            callbacks:{
-              label: c=>` ${c.dataset.label}: ${fmt(c.parsed.y,1)} 萬`
-            }
-          }
-        },
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${fmt(c.parsed.y,1)} 萬`}}},
         scales:{
-          x:{
-            ticks:{color:'#555',font:{size:10},maxRotation:0},
-            grid:{color:'rgba(255,255,255,0.04)'}
-          },
-          y:{
-            ticks:{callback:v=>v+'萬',color:'#555',font:{size:10}},
-            grid:{color:'rgba(255,255,255,0.04)'}
-          }
+          x:{ticks:{color:'#666',font:{size:11},maxRotation:0},grid:{color:'rgba(255,255,255,0.04)'}},
+          y:{ticks:{callback:v=>v+'萬',color:'#666',font:{size:11}},grid:{color:'rgba(255,255,255,0.04)'}}
         }
       }
     });
   }
 
-  // period comparison
-  updatePeriodGrid(dawaPrices, dawaAmt, ratioA, scene);
-
-  // goal section
-  updateGoal(combined, target);
-
-  // final rec
+  updatePeriodGrid(dp,dawaAmt,ratioA,scene);
+  updateGoal(combined,target);
+  updateReminders();
   updateFinalRec();
 }
 
-// ─── PERIOD GRID ─────────────────────────
-function updatePeriodGrid(prices, total, ratioA, scene){
-  const PERIODS = [6,12,18,24];
-  const COLORS  = ['#7eb8f7','#4ade80','#fbbf24','#a78bfa'];
-  const grid = document.getElementById('periodGrid');
+// ── 期數比較 ────────────────────────────
+function updatePeriodGrid(prices,total,ratioA,scene){
+  const PERIODS=[6,12,18,24];
+  const COLORS=['#7eb8f7','#4ade80','#fbbf24','#a78bfa'];
+  const grid=document.getElementById('periodGrid');
   grid.innerHTML='';
 
-  const results = PERIODS.map(m=>{
-    const vals = simDawa(prices, total, ratioA, m);
-    const final = vals[vals.length-1];
-    const minV  = Math.min(...vals);
-    return { m, final, minV, monthly: (total*(1-ratioA)/m) };
+  const results=PERIODS.map(m=>{
+    const vals=simDawa(prices,total,ratioA,m);
+    return {
+      m,
+      finalVal: vals[vals.length-1],
+      finalRet: ((vals[vals.length-1]-total)/total*100),
+      minVal: Math.min(...vals),
+      maxDrawdown: ((Math.min(...vals)-total)/total*100),
+      monthly: (total*(1-ratioA)/m)
+    };
   });
-
-  const bestFinal = Math.max(...results.map(r=>r.final));
-  const bestMin   = Math.max(...results.map(r=>r.minV));
 
   results.forEach((r,i)=>{
-    const ret = ((r.final-total)/total*100);
-    const retSign = ret>=0?'+':'';
-    const isActive = r.m===state.months?'active':'';
+    const isActive=r.m===state.months?'active':'';
+    const retColor=r.finalRet>=0?'#4ade80':'#f87171';
+    const ddColor=r.maxDrawdown>=-10?'#4ade80':r.maxDrawdown>=-20?'#fbbf24':'#f87171';
     grid.innerHTML+=`<div class="period-card ${isActive}" onclick="selectMonths(${r.m})">
       <div class="pm" style="color:${COLORS[i]}">${r.m}月</div>
-      <div class="pl">每月 ${fmt(r.monthly,1)} 萬</div>
-      <div class="pv" style="color:${ret>=0?'#4ade80':'#f87171'}">${retSign}${fmt(ret,1)}%</div>
-      <div class="pv" style="color:#7a7f8e;font-size:0.72rem">最終 ${fmt(r.final,1)} 萬</div>
-      ${r.m===state.months?'<div style="margin-top:6px;font-size:0.65rem;color:#7eb8f7;letter-spacing:0.5px">▶ 目前選擇</div>':''}
+      <div class="pl">每月投入 ${fmt(r.monthly,1)} 萬</div>
+      <div class="pv-label" style="font-size:0.72rem;color:#9aa0b0">3年後大壩市值</div>
+      <div class="pv" style="color:${retColor};font-size:0.95rem;font-weight:500">${fmt(r.finalVal,1)} 萬</div>
+      <div class="pv-label" style="font-size:0.72rem;color:#9aa0b0;margin-top:4px">3年後累積報酬率</div>
+      <div class="pv" style="color:${retColor}">${r.finalRet>=0?'+':''}${fmt(r.finalRet,1)}%</div>
+      <div class="pv-label" style="font-size:0.72rem;color:#9aa0b0;margin-top:4px">最大帳面回撤</div>
+      <div class="pv" style="color:${ddColor}">${fmt(r.maxDrawdown,1)}%</div>
+      ${r.m===state.months?'<div style="margin-top:8px;font-size:0.72rem;color:#7eb8f7;letter-spacing:0.5px">▶ 目前選擇</div>':''}
     </div>`;
   });
 
-  // verdict
-  const verdicts = {
-    bull:`<div class="rec-box rec-blue"><strong>牛市情境：12 個月最均衡</strong>6 個月雖然報酬最高，但一旦中途震盪你已無子彈。12 個月在享受漲勢的同時保留彈性，是 AI 紅利環境的最佳解。</div>`,
-    crash_recover:`<div class="rec-box rec-green"><strong>崩後反彈：18~24 個月勝出</strong>子彈要留到最低點，攤平成本後反彈時獲利最大。你的 6 年持有紀律在這個情境最有優勢。</div>`,
-    sideways:`<div class="rec-box rec-amber"><strong>橫盤整理：12 個月最合適</strong>四種期數差異不大，保留子彈等待方向突破。12 個月是最不後悔的選擇。</div>`,
-    bear:`<div class="rec-box rec-amber"><strong>熊市：24 個月最能保護本金</strong>越長越好，用低價累積更多單位，反彈時是最大受益者。別因「害怕錯過」而縮短期數。</div>`
+  const verdicts={
+    bull:`<div class="rec-box rec-blue"><strong>牛市情境：12 個月最均衡</strong>6 個月報酬最高但子彈提早打完，中途震盪時你已無法加碼。12 個月讓 A 先享受漲勢，B 同時分批入場，是 AI 紅利環境的最佳解。若想更積極參與，可把 A 比例拉高而非縮短 B 期數。</div>`,
+    crash_recover:`<div class="rec-box rec-green"><strong>先崩後漲：18 個月最能把握低點</strong>崩盤期間 B 每月都在更低的價格買進，攤平成本。18 個月讓你在底部區間累積最多單位，反彈時全面獲利。你 6 年持有不賣的紀律，在這個情境是最大的競爭優勢。</div>`,
+    sideways:`<div class="rec-box rec-amber"><strong>橫盤整理：12 個月最適合等待</strong>四種期數差異有限，關鍵是留著子彈等市場選擇方向。若向上突破，12 個月內你仍有 B 可繼續買；若向下修正，你也還有子彈可以在低點加碼。</div>`,
+    bear:`<div class="rec-box rec-amber"><strong>熊市修正：24 個月最能保護本金</strong>越長越好，持續在下跌中攤低成本。24 個月讓你的平均買入成本最低，一旦市場反轉，報酬彈性最大。切忌因「害怕錯過」而把期數縮短——熊市裡縮短只是讓你買在更高的均價。</div>`
   };
-  document.getElementById('periodVerdict').innerHTML = verdicts[state.scene]||'';
+  document.getElementById('periodVerdict').innerHTML=verdicts[state.scene]||'';
 }
 
-// ─── GOAL SECTION ─────────────────────────
-function updateGoal(combined, target){
-  const current = combined[0];
-  const gap = target - current;
-  const pct = Math.min(100,(current/target*100));
+// ── 目標進度 ────────────────────────────
+function updateGoal(combined,target){
+  const current=combined[0];
+  document.getElementById('g-target').textContent=fmtM(target);
+  document.getElementById('g-current').textContent=fmtM(current);
+  const gap=target-current;
+  document.getElementById('g-gap').textContent=gap>0?fmtM(gap):'✓ 已達標';
+  document.getElementById('g-pct').textContent=fmt(Math.min(100,current/target*100),1)+'%';
 
-  document.getElementById('g-target').textContent = fmtM(target);
-  document.getElementById('g-current').textContent = fmtM(current);
-  document.getElementById('g-gap').textContent = gap>0?fmtM(gap):'已達標！';
-  document.getElementById('g-pct').textContent = fmt(pct,1)+'%';
-
-  // progress bars for 1yr / 2yr / 3yr
-  const pts = [
-    { label:'1 年後', val:combined[12], color:'#7eb8f7' },
-    { label:'2 年後', val:combined[24], color:'#4ade80' },
-    { label:'3 年後', val:combined[36], color:'#a78bfa' }
+  const pts=[
+    {label:'1 年後預估總資產',val:combined[12],color:'#7eb8f7'},
+    {label:'2 年後預估總資產',val:combined[24],color:'#4ade80'},
+    {label:'3 年後預估總資產',val:combined[36],color:'#a78bfa'}
   ];
-  const pb = document.getElementById('progressBars');
-  pb.innerHTML='';
+  let pb='';
   pts.forEach(pt=>{
-    const pct2 = Math.min(100,(pt.val/target*100));
-    const overflow = pt.val>=target;
-    pb.innerHTML+=`<div style="margin-bottom:12px">
-      <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:#7a7f8e;margin-bottom:5px">
-        <span>${pt.label}：${fmtM(pt.val)}</span>
-        <span style="color:${overflow?'#4ade80':pt.color}">${fmt(pct2,0)}%${overflow?' ✓':''}</span>
+    const pct=Math.min(100,pt.val/target*100);
+    const over=pt.val>=target;
+    pb+=`<div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:0.82rem;color:#9aa0b0;margin-bottom:6px">
+        <span>${pt.label}：<strong style="color:${over?'#4ade80':pt.color}">${fmtM(pt.val)}</strong></span>
+        <span style="color:${over?'#4ade80':pt.color}">${fmt(pct,0)}%${over?' ✓':''}</span>
       </div>
-      <div class="progress-track">
-        <div class="progress-fill" style="width:${fmt(pct2,1)}%;background:${pt.color}"></div>
-      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${fmt(pct,1)}%;background:${pt.color}"></div></div>
     </div>`;
   });
+  document.getElementById('progressBars').innerHTML=pb;
 
-  // verdict
-  const v1=combined[12], v2=combined[24], v3=combined[36];
+  const v1=combined[12],v2=combined[24],v3=combined[36];
   let msg='';
-  if(v1>=target) msg=`<div class="rec-box rec-green"><strong>1 年內可達標</strong>在此情境下，1 年後總資產 ${fmtM(v1)} 已超過目標 ${fmtM(target)}，目標有望準時達成。</div>`;
-  else if(v2>=target) msg=`<div class="rec-box rec-blue"><strong>2 年內可達標</strong>1 年後 ${fmtM(v1)}，2 年後 ${fmtM(v2)}，達標需要 1~2 年。這是最健康的時間軸，不需要冒額外風險。</div>`;
-  else if(v3>=target) msg=`<div class="rec-box rec-amber"><strong>2~3 年達標</strong>3 年後 ${fmtM(v3)}，距目標還需要一段時間。建議評估是否增加每月儲蓄，或調整資產目標總價。</div>`;
-  else msg=`<div class="rec-box rec-red"><strong>3 年內難達標</strong>此情境下 3 年後 ${fmtM(v3)}，距目標 ${fmtM(target)} 仍有缺口。建議降低目標資產、增加儲蓄、或延長時間軸。</div>`;
+  if(v1>=target) msg=`<div class="rec-box rec-green"><strong>1 年內可達標</strong>1 年後總資產 ${fmtM(v1)}，超過目標 ${fmtM(target)}。這是最理想的情境，但請注意這是樂觀假設，實際市場不保證。</div>`;
+  else if(v2>=target) msg=`<div class="rec-box rec-blue"><strong>2 年內可達標</strong>1 年後 ${fmtM(v1)}，2 年後 ${fmtM(v2)}。2 年的時間軸健康且可行，不需要為了「加速」而冒額外風險。</div>`;
+  else if(v3>=target) msg=`<div class="rec-box rec-amber"><strong>2~3 年達標</strong>3 年後 ${fmtM(v3)}，接近目標。可考慮增加每月儲蓄，或將目標適度下調，加快達標時程。</div>`;
+  else msg=`<div class="rec-box rec-red"><strong>此情境3年內難達標</strong>3 年後 ${fmtM(v3)}，距目標 ${fmtM(target)} 仍有缺口 ${fmtM(target-v3)}。建議降低目標金額、拉長時間軸或增加月儲蓄。</div>`;
   document.getElementById('goalVerdict').innerHTML=msg;
 }
 
-// ─── FINAL REC ────────────────────────────
-function updateFinalRec(){
-  const { dawaAmt, ratioA, months, target, scene } = state;
+// ── 專屬投資提醒（動態，依配置變化）──────
+function updateReminders(){
+  const {dawaAmt,ratioA,months,scene}=state;
   const A=dawaAmt*ratioA, B=dawaAmt*(1-ratioA);
   const monthly=B/months;
-  const sceneLabel={ bull:'牛市繼續', crash_recover:'崩後反彈', sideways:'橫盤整理', bear:'熊市修正' }[scene];
-  document.getElementById('finalRecContent').innerHTML=`
-    <div class="rec-box rec-blue" style="margin-bottom:12px">
-      <strong>你的完整情況摘要</strong>
-      安聯大壩 6 年老投資人，真實成本約 45 萬，已實現 200%+ 報酬後贖回再投入。
-      搭配 0050 持倉 180 萬（每月加碼 1 萬），兩者合計為資產來源。
-    </div>
-    <div class="rec-box rec-green" style="margin-bottom:12px">
-      <strong>當前配置：A ${(ratioA*100).toFixed(0)}%（${fmt(A,1)} 萬一次投入）+ B ${((1-ratioA)*100).toFixed(0)}%（${fmt(B,1)} 萬分 ${months} 個月）</strong>
-      每月定投 ${fmt(monthly,1)} 萬。情境：${sceneLabel}。<br>
-      你的成本優勢（真實底線遠低於帳面）讓 A 可以比一般人略積極，但 12 個月的 B 維持紀律是關鍵。
-    </div>
-    <div class="rec-box rec-amber">
-      <strong>最重要的一件事：不要因為「反正是獲利」而破壞紀律</strong>
-      6 年持有紀律是你最大的財富。繼續做你已經做到的事：定期投入、不看短線、不在恐慌時賣出。
-      目標的時間軸拉到 2~3 年，比強求 1 年獲利 100 萬更可靠、更健康。
-    </div>
-  `;
+
+  // 固定提醒（針對你的個人情況）
+  const fixed=[
+    {
+      border:'border-l-purple',
+      icon:'★',
+      title:'你的最大資產：6 年持有紀律，不是任何策略',
+      body:`你在 2020 年疫情暴跌、2022 年升息重摔都沒有出場，才能從 45 萬滾到 200%+ 報酬。
+      這個「不動如山」的能力比任何 A/B 比例都值錢。<strong>未來無論市場怎麼跌，第一個問題問自己：
+      6 年前的我會不會因為這個理由賣出？</strong>`
+    },
+    {
+      border:'border-l-amber',
+      icon:'⚠',
+      title:'「反正是獲利」是最危險的心理陷阱',
+      body:`正因為這 100 萬的真實成本只有 ~45 萬，你的心理底線比別人低，風險承受力確實較強。
+      但這也容易讓人在市場過熱時押得更重，說「反正是賺的錢」。
+      <strong>已實現的獲利跟本金一樣真實——虧掉了就是虧掉了，不會因為是獲利就比較不痛。</strong>`
+    },
+    {
+      border:'border-l-red',
+      icon:'✕',
+      title:'資金用途已定，不要臨時改變',
+      body:`這筆錢與 0050 都是你的中期財務目標資金。
+      市場若大漲讓你感覺「可以再冒一點險」，或跌了讓你「想要停損先出」，
+      <strong>都要回到這個原點：這是目標性資金，不是短線操作的資本。</strong>`
+    }
+  ];
+
+  // 動態提醒（依 A 比例、期數、情境）
+  const dynamic=[];
+
+  if(ratioA>=0.50){
+    dynamic.push({
+      border:'border-l-red',
+      icon:'!',
+      title:`A 比例 ${Math.round(ratioA*100)}% 偏高，請確認你能承受`,
+      body:`A 一次投入 ${fmt(A,1)} 萬，佔總資金 ${Math.round(ratioA*100)}%。
+      你的成本基礎低確實讓你有更高的承受力，但在台股融資創 17 年高、市場過熱的現在，
+      <strong>這個比例意味著若短期回跌 25%，帳面瞬間少 ${fmt(A*0.25,1)} 萬。</strong>
+      確認你不會因為這個帳面數字而改變計畫。`
+    });
+  } else if(ratioA<=0.20){
+    dynamic.push({
+      border:'border-l-blue',
+      icon:'i',
+      title:`A 比例 ${Math.round(ratioA*100)}% 偏保守，小心踏空`,
+      body:`A 只投入 ${fmt(A,1)} 萬，大部分子彈留在場外。
+      在 AI 基本面確實強勁的現在，過於保守可能讓你看著市場漲、每個月越買越貴。
+      <strong>你的 6 年持有紀律讓你本來就比一般人更能承受波動，A 在 25~35% 可能更適合你的風險特性。</strong>`
+    });
+  } else {
+    dynamic.push({
+      border:'border-l-green',
+      icon:'✓',
+      title:`A 比例 ${Math.round(ratioA*100)}% 配置均衡`,
+      body:`A 投入 ${fmt(A,1)} 萬立即入場，B 留 ${fmt(B,1)} 萬分 ${months} 個月攤平。
+      這個比例讓你既參與現在的 AI 漲勢，又保留應對波動的子彈。
+      <strong>以你的成本優勢來說，這是進攻與防守的理想平衡點。</strong>`
+    });
+  }
+
+  if(months===6){
+    dynamic.push({
+      border:'border-l-amber',
+      icon:'⚠',
+      title:'B 6 個月：子彈消耗快，震盪應對空間小',
+      body:`每月 ${fmt(monthly,1)} 萬，6 個月後 B 就全部投完。
+      若市場在第 2~4 個月出現修正，你的子彈已所剩無幾，<strong>接下來的 12~18 個月你只能空著手乾看低點，
+      無法加碼。</strong> 選 6 個月代表你判斷市場不會在近期大跌，請確認這個判斷。`
+    });
+  } else if(months===24){
+    dynamic.push({
+      border:'border-l-blue',
+      icon:'i',
+      title:'B 24 個月：攤平效果最強，但早期踏空風險高',
+      body:`每月只投 ${fmt(monthly,1)} 萬，前 12 個月入場資金有限。
+      若市場在這期間大漲，你的平均買入成本會比較高。
+      <strong>24 個月適合你確信短期會有大幅修正的情境——如果市場繼續漲，你會少賺不少。</strong>`
+    });
+  } else if(months===12){
+    dynamic.push({
+      border:'border-l-green',
+      icon:'✓',
+      title:'B 12 個月：AI 週期核心時段內完整布局',
+      body:`每月投入 ${fmt(monthly,1)} 萬，12 個月內完整覆蓋 2026~2027 年的 AI 建設高峰期。
+      <strong>既不會因為太短而在震盪後無子彈，也不會因為太長而錯過主要的上漲波段。
+      以你目前的資金規模和持倉紀律，這是最適配的選擇。</strong>`
+    });
+  } else {
+    dynamic.push({
+      border:'border-l-blue',
+      icon:'i',
+      title:'B 18 個月：適合預期有中期修正的佈局',
+      body:`每月 ${fmt(monthly,1)} 萬，保留充足子彈應對可能的修正。
+      <strong>若市場在 6~12 個月內出現明顯回跌，你仍有一半的 B 可以在低點加速買入。
+      這是「不確定牛熊，但長期看好」時最好的節奏。</strong>`
+    });
+  }
+
+  if(scene==='bull'){
+    dynamic.push({
+      border:'border-l-amber',
+      icon:'⚠',
+      title:'牛市情境下：不要因為帳面獲利而提高風險',
+      body:`若市場如預期持續漲，幾個月後你的帳面數字會很好看。
+      <strong>這時最容易發生的錯誤是：「反正在賺，再加碼一些」。</strong>
+      你的計畫已經設計好了，A+B 的配置不需要因為漲了就改變。
+      帳面獲利不是可以拿來承擔更多風險的理由。`
+    });
+  } else if(scene==='crash_recover'){
+    dynamic.push({
+      border:'border-l-green',
+      icon:'★',
+      title:'崩盤情境是你的主場：別在最低點賣出',
+      body:`以你 6 年的持有經歷，你比大多數人更知道崩盤時的感受。
+      <strong>當帳面虧損最大的時候，正是 B 買到最便宜的時候。</strong>
+      崩跌時不僅不要停損，若手上有額外閒置資金，那個時間點才是真正積極加碼的機會。`
+    });
+  } else if(scene==='bear'){
+    dynamic.push({
+      border:'border-l-red',
+      icon:'!',
+      title:'熊市情境：最重要的是不要改計畫',
+      body:`持續下跌時最大的敵人是「再等等，更低再買」的心理。
+      這會讓你錯過反彈，而且幾乎沒有人能精準抓到底部。
+      <strong>B 每月固定投入的意義，正是在熊市時強迫你繼續買，即使你的直覺叫你停。
+      相信紀律，不要相信市場時機判斷。</strong>`
+    });
+  }
+
+  const all=[...fixed,...dynamic];
+  const html=`<div class="reminders-grid">${all.map(r=>`
+    <div class="reminder-card ${r.border}">
+      <div class="r-title"><span class="r-icon">${r.icon}</span>${r.title}</div>
+      <div class="r-body">${r.body}</div>
+    </div>`).join('')}</div>`;
+  document.getElementById('remindersContent').innerHTML=html;
 }
 
-// ─── EVENTS ───────────────────────────────
+// ── 最終建議 ────────────────────────────
+function updateFinalRec(){
+  const {dawaAmt,ratioA,months,target,scene}=state;
+  const A=dawaAmt*ratioA, B=dawaAmt*(1-ratioA), monthly=B/months;
+  const sceneLabel={bull:'牛市繼續',crash_recover:'先崩後漲',sideways:'橫盤震盪',bear:'熊市修正'}[scene];
+
+  const aLevel = ratioA>=0.50?'偏積極':ratioA<=0.20?'偏保守':'均衡';
+  const aColor = ratioA>=0.50?'rec-amber':ratioA<=0.20?'rec-blue':'rec-green';
+  const mLevel = months<=6?'子彈消耗快':months>=18?'攤平效果強':'節奏均衡';
+
+  document.getElementById('finalRecContent').innerHTML=`
+    <div class="rec-box ${aColor}" style="margin-top:0;margin-bottom:12px">
+      <strong>當前配置：A ${Math.round(ratioA*100)}%（${fmt(A,1)} 萬一次投入）＋ B ${Math.round((1-ratioA)*100)}%（${fmt(B,1)} 萬分 ${months} 個月，每月 ${fmt(monthly,1)} 萬）</strong>
+      配置屬性：A 比例${aLevel}、B 期數${mLevel}。市場情境：${sceneLabel}。
+    </div>
+    <div class="rec-box rec-blue" style="margin-bottom:12px">
+      <strong>你的完整資產結構</strong>
+      安聯大壩 ${fmt(dawaAmt,0)} 萬（6年老倉再投入，真實成本約 45 萬）＋ 0050 持倉 180 萬（每月加碼 1 萬）。
+      合計部位 ${fmt(dawaAmt+180,0)} 萬，兩筆資產目標一致，應視為整體規劃而非各自獨立。
+    </div>
+    <div class="rec-box rec-amber">
+      <strong>核心原則：時間是你最大的武器</strong>
+      你的 6 年持有經歷已經證明你具備長期投資者的素質。目標資產 ${fmtM(target)} 用 2~3 年達到，
+      遠比強求 1 年獲利 100 萬更可靠、更不傷身。
+      每個月繼續定投、不在下跌時改計畫，剩下的交給時間。
+    </div>`;
+}
+
+// ── 互動事件 ────────────────────────────
 function selectMonths(m){
   state.months=m;
   document.getElementById('sl-months').value=m;
@@ -885,13 +1049,174 @@ document.getElementById('sel-scene').addEventListener('change',e=>{
   state.scene=e.target.value;
   update();
 });
-document.getElementById('sel-scene0050').addEventListener('change',e=>{
-  state.scene0050=e.target.value;
-  update();
-});
 
-// init
 update();
+// ══════════════════════════════════════════
+// SECTION 09 — 固定策略四情境比較
+// ══════════════════════════════════════════
+const CMP_N = 36;
+const CMP_LABELS = Array.from({length:CMP_N+1},(_,i)=>i===0?'現在':(i%6===0?`第${i}月`:''));
+const CMP_TOTAL = 100;
+
+const CMP_SCENES = {
+  bull:{
+    name:'牛市繼續',color:'#7eb8f7',
+    prices(){const p=[1];for(let i=1;i<=CMP_N;i++)p.push(1+0.50*(i/CMP_N)+0.04*Math.sin(i*1.1));return p;},
+    bestA:0.40,bestM:6,bestLabel:'A40% B6月',
+    why:'漲勢確立時，提早把 B 打完報酬最高，A 拉高到 40% 也更多享受早期漲幅。',
+    verdictCls:'cv-blue',
+    verdict:'<strong>牛市：固定策略少賺約 6~8 萬，代價換來不需猜方向</strong>最佳策略把 B 縮到 6 月讓資金更快進場，持續上漲時確實多賺。但差距不大，是用「不需猜市場」換來的合理代價。固定策略的 A30% 已讓你第一天入場享受漲勢。'
+  },
+  crash:{
+    name:'先崩後漲',color:'#f87171',
+    prices(){const p=[1];for(let i=1;i<=CMP_N;i++){const t=i/CMP_N;p.push(t<0.38?1-0.30*(t/0.38):0.70+0.58*((t-0.38)/0.62));}return p;},
+    bestA:0.20,bestM:18,bestLabel:'A20% B18月',
+    why:'崩盤期間用更多 B 攤低成本，A 先少放保留彈性。18 個月確保底部還有子彈。',
+    verdictCls:'cv-amber',
+    verdict:'<strong>先崩後漲：固定策略勝全押，但比最佳策略少賺</strong>你的 B 在低點每月買入，反彈時大幅獲利——這是固定策略設計的保護機制。最佳策略 A 更小、B 更長，底部子彈更多，反彈報酬更大。固定策略在此情境已遠優於全押。'
+  },
+  sideways:{
+    name:'橫盤震盪',color:'#fbbf24',
+    prices(){const p=[1];for(let i=1;i<=CMP_N;i++)p.push(1+0.05*Math.sin(i*0.65)+0.004*i);return p;},
+    bestA:0.30,bestM:12,bestLabel:'A30% B12月',
+    why:'橫盤時市場無明確方向，A30% B12 月剛好是最優配置，與固定策略完全一致。',
+    verdictCls:'cv-green',
+    verdict:'<strong>橫盤震盪：固定策略 = 最佳策略，完全重疊！</strong>橫盤時沒有明顯漲跌方向，A30% B12 月恰好是最優解。你在牛市環境設計的固定策略，橫盤時也是最佳答案，代表這個配置本就非常均衡。'
+  },
+  bear:{
+    name:'熊市修正',color:'#888780',
+    prices(){const p=[1];for(let i=1;i<=CMP_N;i++)p.push(Math.max(0.60,1-0.35*(i/CMP_N)-0.03*Math.sin(i)));return p;},
+    bestA:0.15,bestM:24,bestLabel:'A15% B24月',
+    why:'持續下跌時 A 越小越好，B 拉到最長讓你越跌越便宜，反彈彈性最大。',
+    verdictCls:'cv-red',
+    verdict:'<strong>熊市：固定策略最弱的情境，A 的 30 萬承受最大帳面損失</strong>最佳策略 A 只放 15%，傷害小很多。但你選固定策略是因為判斷牛市機率更高，在 AI 基本面確實強的當下，這個判斷本身合理。熊市時最重要的事：繼續按 B 計畫買入，不要停損。'
+  }
+};
+
+function cmpSimDawa(prices,total,rA,months){
+  const A=total*rA,B=total*(1-rA),monthly=B/months;
+  let uA=A/prices[0],uB=0,spent=A;
+  const v=[total];
+  for(let i=1;i<prices.length;i++){
+    if(i<=months){uB+=monthly/prices[i];spent+=monthly;}
+    v.push(+(((uA+uB)*prices[i]+Math.max(0,total-spent)).toFixed(2)));
+  }
+  return v;
+}
+function cmpSimAllIn(prices,total){const u=total/prices[0];return prices.map(p=>+(u*p).toFixed(2));}
+function cmpSimDCA(prices,total,months){
+  const monthly=total/months;let units=0,spent=0;
+  const v=[total];
+  for(let i=1;i<prices.length;i++){
+    if(i<=months){units+=monthly/prices[i];spent+=monthly;}
+    v.push(+((units*prices[i]+Math.max(0,total-spent)).toFixed(2)));
+  }
+  return v;
+}
+
+let cmpChart=null;
+
+function cmpDraw(sceneKey){
+  const s=CMP_SCENES[sceneKey];
+  const prices=s.prices();
+  const fixed=cmpSimDawa(prices,CMP_TOTAL,0.30,12);
+  const best=cmpSimDawa(prices,CMP_TOTAL,s.bestA,s.bestM);
+  const allIn=cmpSimAllIn(prices,CMP_TOTAL);
+  const dca=cmpSimDCA(prices,CMP_TOTAL,24);
+  const datasets=[
+    {label:'固定策略',data:fixed,borderColor:'#7eb8f7',backgroundColor:'rgba(126,184,247,0.07)',borderWidth:2.5,tension:0.4,pointRadius:0,fill:true},
+    {label:'最佳策略',data:best,borderColor:'#4ade80',backgroundColor:'transparent',borderWidth:2.5,tension:0.4,pointRadius:0},
+    {label:'全押',data:allIn,borderColor:'#f87171',backgroundColor:'transparent',borderWidth:1.5,borderDash:[6,4],tension:0.4,pointRadius:0},
+    {label:'全定額',data:dca,borderColor:'#888780',backgroundColor:'transparent',borderWidth:1.5,borderDash:[3,3],tension:0.4,pointRadius:0}
+  ];
+  if(cmpChart){cmpChart.data.labels=CMP_LABELS;cmpChart.data.datasets=datasets;cmpChart.update('none');}
+  else{
+    cmpChart=new Chart(document.getElementById('cmpChart'),{
+      type:'line',data:{labels:CMP_LABELS,datasets},
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${(+c.parsed.y).toFixed(1)} 萬`}}},
+        scales:{
+          x:{ticks:{color:'#666',font:{size:11},maxRotation:0},grid:{color:'rgba(255,255,255,0.04)'}},
+          y:{ticks:{callback:v=>v+'萬',color:'#666',font:{size:11}},grid:{color:'rgba(255,255,255,0.04)'}}
+        }
+      }
+    });
+  }
+  document.getElementById('cmpVerdict').innerHTML=`<div class="cmp-verdict ${s.verdictCls}">${s.verdict}</div>`;
+}
+
+function cmpSwitch(sceneKey,btn){
+  document.querySelectorAll('.cmp-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  cmpDraw(sceneKey);
+}
+
+function buildCmpOptCards(){
+  const keys=['bull','crash','sideways','bear'];
+  const sceneColors=['#7eb8f7','#f87171','#fbbf24','#888780'];
+  let html='';
+  keys.forEach((k,i)=>{
+    const s=CMP_SCENES[k];
+    const prices=s.prices();
+    const best=cmpSimDawa(prices,CMP_TOTAL,s.bestA,s.bestM);
+    const fixed=cmpSimDawa(prices,CMP_TOTAL,0.30,12);
+    const bFinal=best[CMP_N],fFinal=fixed[CMP_N];
+    const diff=bFinal-fFinal;
+    const isMatch=k==='sideways';
+    const diffColor=Math.abs(diff)<0.5?'#fbbf24':diff>0?'#f87171':'#4ade80';
+    const diffLabel=Math.abs(diff)<0.5?'完全一致':diff>0?`固定少賺 ${diff.toFixed(1)} 萬`:`固定多賺 ${Math.abs(diff).toFixed(1)} 萬`;
+    html+=`<div class="opt-card ${isMatch?'opt-match':''}">
+      ${isMatch?'<span class="opt-match-badge">與固定策略相同</span>':''}
+      <div class="oc-scene" style="color:${sceneColors[i]}">${s.name}</div>
+      <div class="oc-strat">${s.bestLabel}</div>
+      <div class="oc-sub">A${s.bestA*100}% / B${(1-s.bestA)*100}% / ${s.bestM}月<br>每月 ${(CMP_TOTAL*(1-s.bestA)/s.bestM).toFixed(1)} 萬</div>
+      <div class="oc-row"><span class="ok">最佳3年後</span><span class="ov" style="color:#4ade80">${bFinal.toFixed(1)} 萬</span></div>
+      <div class="oc-row"><span class="ok">固定3年後</span><span class="ov">${fFinal.toFixed(1)} 萬</span></div>
+      <div class="oc-row"><span class="ok">差距</span><span class="ov" style="color:${diffColor}">${diffLabel}</span></div>
+      <div class="oc-why">${s.why}</div>
+    </div>`;
+  });
+  document.getElementById('cmpOptCards').innerHTML=html;
+}
+
+function buildCmpTable(){
+  const keys=['bull','crash','sideways','bear'];
+  let html='';
+  keys.forEach(k=>{
+    const s=CMP_SCENES[k];
+    const prices=s.prices();
+    const fixed=cmpSimDawa(prices,CMP_TOTAL,0.30,12);
+    const best=cmpSimDawa(prices,CMP_TOTAL,s.bestA,s.bestM);
+    const fFinal=fixed[CMP_N],bFinal=best[CMP_N];
+    const fRet=(fFinal-CMP_TOTAL)/CMP_TOTAL*100;
+    const diff=bFinal-fFinal;
+    const maxDD=Math.min(...fixed)-CMP_TOTAL;
+    const isMatch=k==='sideways';
+    const retColor=fRet>=0?'#4ade80':'#f87171';
+    const diffColor=Math.abs(diff)<0.5?'#fbbf24':diff>0?'#f87171':'#4ade80';
+    const concl=Math.abs(diff)<0.5?'<span style="color:#4ade80;font-weight:500">最佳解一致</span>':
+      diff>0?`<span style="color:#f87171">少賺 ${diff.toFixed(1)} 萬</span>`:
+      `<span style="color:#4ade80">多賺 ${Math.abs(diff).toFixed(1)} 萬</span>`;
+    const ddColor=maxDD>=-10?'#4ade80':maxDD>=-20?'#fbbf24':'#f87171';
+    html+=`<tr class="${isMatch?'match-row':''}">
+      <td><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${s.color};margin-right:6px;vertical-align:middle"></span>${s.name}</td>
+      <td style="font-family:'DM Mono',monospace;font-weight:500">${fFinal.toFixed(1)} 萬</td>
+      <td style="color:${retColor}">${fRet>=0?'+':''}${fRet.toFixed(1)}%</td>
+      <td style="font-size:0.78rem;color:#9aa0b0">${s.bestLabel}</td>
+      <td style="font-family:'DM Mono',monospace">${bFinal.toFixed(1)} 萬</td>
+      <td style="color:${diffColor}">${diff>=0?'+':''}${diff.toFixed(1)}</td>
+      <td style="color:${ddColor}">${maxDD.toFixed(1)} 萬</td>
+      <td>${concl}</td>
+    </tr>`;
+  });
+  document.getElementById('cmpTableBody').innerHTML=html;
+}
+
+cmpDraw('bull');
+buildCmpOptCards();
+buildCmpTable();
+
 </script>
 </body>
 </html>
